@@ -58,6 +58,7 @@ class RestaurantsTableViewController: UITableViewController {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
+        if segue.identifier == "Restaurant Details"{
         let restaurantVC = segue.destination as! RestaurantViewController
         restaurantVC.restaurant=Restaurants.shared[tableView.indexPathForSelectedRow!.row]
         
